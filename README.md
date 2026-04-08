@@ -15,3 +15,4 @@ Instruções para uso:
 
 5 - npm start
 6 - http://localhost:3000
+<img width="1024" height="1536" alt="aviao" src="https://github.com/user-attachments/assets/2170a9e6-3826-4c3f-8819-c45cbf37c8db" />
