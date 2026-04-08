@@ -1,0 +1,123 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Embraer E195-E2 "Johnny Cavalcante"</title>
+        <meta name="description" content="A historia do avião da Embraer e como ele se tornou uma baleia brasileira voadora">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+<header>
+    <h1 class="titulo-principal">Cadastre-se</h1>
+
+</header>
+
+<body>
+    <main>
+        <section>
+            <h2 class="subtitulo-centralizado">Junte-se ao Culto da Baleia Voadora!</h2>
+            <p class="texto-corrido">Preencha o formulário abaixo para se tornar um membro do nosso culto e receber atualizações exclusivas sobre o Embraer E195-E2, eventos e muito mais!</p>
+
+            
+        </section> 
+        <form action="/registrar-fiel" method="POST" class="formulario">
+            <div class="campo-cadastro">
+                <label for="campo-nome">Seu nome:</label>
+                <input type="text" id="campo-nome"name="nome_usuario" required placeholder="Digite seu nome:">
+            </div>
+            <div class="campo-cadastro">
+                <label for="campo-email">Seu email:</label>        
+                <input type="email"id="campo-email"name="email_usuario" required placeholder="Digite seu email:">
+            </div>
+            <div class="campo-cadastro">
+                <label for="campo-data-nascimento">Sua data de nascimento:</label>        
+                <input type="date"id="campo-data-nascimento"name="date_usuario" required>
+            </div>
+            <div class="campo-cadastro">
+                <label for="campo-curso">Selecione seu curso:</label>        
+                <select type=""id="campo-curso"name="curso_usuario" required>
+                    <option value="" disabled selected>Selecione um curso...</option>
+                    <option value="ad">Administração</option>
+                    <option value="arq">Arquitetura e Urbanismo</option>
+                    <option value="art">Artes Cênicas</option>
+                    <option value="bio">Biomedicina</option>
+                    <option value="biof">Biofísica</option>
+                    <option value="bio">Ciências Biológicas</option>
+                    <option value="comp">Ciência da Computação</option>
+                    <option value="cont">Ciências Contábeis</option>
+                    <option value="eco">Ciências Econômicas</option>
+                    <option value="soc">Ciências Sociais</option>
+                    <option value="dir">Direito</option>
+                    <option value="edf">Educação Física</option>
+                    <option value="enf">Enfermagem</option>
+                    <option value="engc">Engenharia Civil</option>
+                    <option value="enge">Engenharia Elétrica</option>
+                    <option value="engm">Engenharia Mecânica</option>
+                    <option value="engp">Engenharia de Produção</option>
+                    <option value="engq">Engenharia Química</option>
+                    <option value="est">Estatística</option>
+                    <option value="fis">Física</option>
+                    <option value="fon">Fonoaudiologia</option>
+                    <option value="geo">Geografia</option>
+                    <option value="geol">Geologia</option>
+                    <option value="hist">História</option>
+                    <option value="jor">Jornalismo</option>
+                    <option value="let">Letras</option>
+                    <option value="mat">Matemática</option>
+                    <option value="med">Medicina</option>
+                    <option value="mus">Música</option>
+                    <option value="nut">Nutrição</option>
+                    <option value="odo">Odontologia</option>
+                    <option value="ped">Pedagogia</option>
+                    <option value="psi">Psicologia</option>
+                    <option value="pub">Publicidade e Propaganda</option>
+                    <option value="qui">Química</option>
+                    <option value="rad">Radiologia</option>
+                    <option value="rel">Relações Internacionais</option>
+                    <option value="ser">Serviço Social</option>
+                    <option value="sis">Sistemas de Informação</option>
+                    <option value="ter">Terapia Ocupacional</option>
+                    <option value="tur">Turismo</option>
+                    <option value="unk">Não encontrei meu curso</option>
+                </select>
+            </div>
+            <div class="campo-cadastro">
+                <label for="senha-usuario">Digite uma senha:</label>
+                <input type="password" id="senha-usuario" name= "password_usuario" required minlength="8"
+                pattern="^(?=.*[0-9].*[0-9])(?=.*[!@#$%^&*]).{8,}$"
+                title="senha deve ter pelo menos 2 números e 1 caractere especial."> 
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="check-mostrar-senha">
+                <label for="check-mostrar-senha">Mostrar senha</label>
+            </div>
+
+            <div class = "termos-container">
+                <input type="checkbox" name="termos" id="aceitar-termos" required>
+                <label for="aceitar-termos">
+                    Eu li e concordo com os 
+                </label>
+                <button type = "button" onclick="abrirTermos()">Termos de Uso</button>
+            </div>
+            <div id = "modal-termos" style="display: none;">
+                <h2>Termos do Culto</h2>
+                <p>1 - Fidelidade à Baleia: Ao clicar em "Aceitar", você reconhece que o Embraer E195-E2 não é apenas um avião, mas uma entidade majestosa que protege os céus do Fundão.</p>
+                <br>
+                <p>2 - O Silêncio de Johnny C: Você se compromete a não questionar por que um avião tem apelido de peixe, aceitando a dualidade da natureza aerodinâmica.</p>
+                <br>
+                <p>3 - Dízimo de Joelho: Em caso de encontro com a divindade Johnny C, o membro deverá estar portando um "joelho" (salgado) devidamente aquecido para fins de oferenda.</p>
+                <br>
+                <p>4 - Saída do Culto: A única forma de sair é voando. Sem paraquedas.</p>
+                <br>
+                <button class="botaofechar" type="button" onclick="fecharTermos()" >Fechar</button>
+            </div>
+            <div class="campo-cadastro">
+                <button type="submit" class="botao-enviar">Juntar-se!</button>
+            </div>
+            
+            </div>
+            </form>    
+        </form>
+        <script src= "/js/script.js"></script>
+</body>
+</html>
